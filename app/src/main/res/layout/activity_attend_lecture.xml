@@ -39,16 +39,17 @@
 
     <LinearLayout
         android:id="@+id/loginpanel"
-        android:layout_width="354dp"
-        android:layout_height="219dp"
-        android:layout_marginStart="10dp"
+        android:layout_width="348dp"
+        android:layout_height="224dp"
         android:layout_marginBottom="12dp"
         android:orientation="vertical"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:layout_constraintVertical_bias="0.625">
+        app:layout_constraintVertical_bias="0.36">
 
         <EditText
             android:id="@+id/username"
@@ -130,5 +131,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gifImageView2" />
+
+    <Button
+        android:id="@+id/openSimilarity"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:text="Similarity Comaprsion"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginpanel" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

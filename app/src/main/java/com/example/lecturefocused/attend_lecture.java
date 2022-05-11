@@ -2,7 +2,9 @@ package com.example.lecturefocused;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -29,7 +31,7 @@ public class attend_lecture extends AppCompatActivity {
 
     EditText editTextSay;
     Button buttonSend;
-    Button buttonDisconnect;
+    Button buttonDisconnect, openOther;
     String Seat;
     String msgLog = "";
 
@@ -52,11 +54,30 @@ public class attend_lecture extends AppCompatActivity {
 
         buttonConnect.setOnClickListener(buttonConnectOnClickListener);
         buttonDisconnect.setOnClickListener(buttonDisconnectOnClickListener);
+        openOther=(Button)findViewById(R.id.openSimilarity);
 
         editTextSay = (EditText)findViewById(R.id.say);
         buttonSend = (Button)findViewById(R.id.send);
 
         buttonSend.setOnClickListener(buttonSendOnClickListener);
+        openOther.setOnClickListener(new View.OnClickListener() {
+                                         @Override
+                                         public void onClick(View view) {
+                                             Intent i;
+                                             PackageManager manager = getPackageManager();
+                                             try {
+                                                 i = ((PackageManager) manager).getLaunchIntentForPackage("com.huawei.mlkit.example");
+                                                 if (i == null)
+                                                     throw new PackageManager.NameNotFoundException();
+                                                 i.addCategory(Intent.CATEGORY_LAUNCHER);
+                                                 startActivity(i);
+                                             } catch (PackageManager.NameNotFoundException e) {
+
+                                             }
+                                         }
+
+
+        });
 
 
 
@@ -258,6 +279,9 @@ public class attend_lecture extends AppCompatActivity {
         private void disconnect(){
             goOut = true;
         }
+
+
     }
+
 
 }
