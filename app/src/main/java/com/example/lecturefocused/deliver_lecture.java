@@ -37,7 +37,7 @@ public class deliver_lecture extends AppCompatActivity {
     String msgLog = "";
     List<ChatClient> userList;
     ServerSocket serverSocket;
-//StudentDetails mystudent=new StudentDetails();
+
 
 
     public List<ChatClient> getUserList() {
