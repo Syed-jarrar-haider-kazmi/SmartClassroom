@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.lecturefocused">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Step 1: Add the following permission to the app -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" /> <!-- Step 2: This permission is depreciated in Android P -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".AttendenceList"
+            android:exported="true" />
+        <activity
+            android:name=".FingerPrint"
+            android:exported="true" />
+        <activity
+            android:name=".Scanner"
+            android:exported="true" />
+        <activity android:name=".result_stat" />
+        <activity android:name=".attend_lecture" />
+        <activity android:name=".deliver_lecture" />
+        <activity android:name=".teacher_panel" />
+        <activity android:name=".logout" />
+        <activity
+            android:name=".student_panel"
+            android:label="@string/title_activity_student_panel"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".helpdesk" />
+        <activity android:name=".teacher_login" />
+        <activity android:name=".student_login" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

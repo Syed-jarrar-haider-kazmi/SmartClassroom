@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:backgroundTint="@color/white"
+
+android:background="@color/cardview_dark_background"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/ImgContact"
+        android:layout_width="91dp"
+        android:layout_height="61dp"
+        android:contentDescription=""
+        android:layout_gravity="center"
+        android:src="@drawable/contact_pic">
+
+    </ImageView>
+
+   <LinearLayout
+       android:layout_width="200dp"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+>
+       <TextView
+           android:id="@+id/contacts"
+           android:layout_width="200dp"
+           android:layout_height="wrap_content"
+           android:layout_gravity="top"
+
+           android:fontFamily="serif"
+           android:padding="10dp"
+           android:text="Student"
+
+           android:textColor="@color/cardview_dark_background"
+           android:textSize="18sp">
+
+
+       </TextView>
+
+       <TextView
+           android:id="@+id/myseat"
+           android:layout_width="200dp"
+           android:layout_height="wrap_content"
+
+
+           android:fontFamily="serif"
+           android:padding="10dp"
+           android:text="Seat No"
+
+           android:textColor="@color/cardview_dark_background"
+           android:textSize="18sp">
+
+
+       </TextView>
+
+
+   </LinearLayout>
+    <TextView
+        android:id="@+id/attendence"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:text="P"
+        android:layout_gravity="right|top"
+
+        android:textSize="24sp"
+        android:gravity="center"
+        android:textColor="@color/cardview_dark_background">
+
+    </TextView>
+
+
+
+</LinearLayout>
